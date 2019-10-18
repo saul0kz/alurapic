@@ -8,9 +8,9 @@
             autofocus>
     </form>
 </div>
-filter : {{filter | uppercase}}
+filter : {{filter}}
 <app-photos [photos]="photos | filterByDescription : filter"></app-photos>
-
+<app-load-button></app-load-button>
 
 
 
