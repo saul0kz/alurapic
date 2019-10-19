@@ -26,7 +26,8 @@ export class PhotoListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.userName = this.activatedRoute.snapshot.params.userName;
-    this.currentPage = this.activatedRoute.snapshot.params.page;
+   this.activatedRoute.snapshot.params.page;
+    
     this.hasMore = true;
     this.photos = this.activatedRoute.snapshot.data.photos;
     this.debounce.pipe(debounceTime(300)).subscribe(filter => this.filter = filter);
@@ -36,9 +37,11 @@ export class PhotoListComponent implements OnInit, OnDestroy {
   }
 
   load() {
+    console.log("load");
     this.photoService
       .listFromUserPaginated(this.userName, ++this.currentPage)
       .subscribe(photos => {
+        
         this.photos = this.photos.concat(photos);
         if (photos.length < 12) this.hasMore = false;
       });
