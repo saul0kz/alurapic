@@ -7,7 +7,6 @@ import { FilterByDescriptionPipe } from './filter-by-description.pipe';
 import { PhotoModule } from '../photo/photo.module';
 
 
-
 @NgModule({
     declarations: [PhotoListComponent, LoadButtonComponent, PhotosComponent, FilterByDescriptionPipe],
 
