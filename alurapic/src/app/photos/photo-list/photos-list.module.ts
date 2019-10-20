@@ -5,12 +5,12 @@ import { LoadButtonComponent } from './load-button/load-button.component';
 import { PhotosComponent } from './photos/photos.component';
 import { FilterByDescriptionPipe } from './filter-by-description.pipe';
 import { PhotoModule } from '../photo/photo.module';
-import { PhotosModule } from '../photos.module';
+
 
 
 @NgModule({
     declarations: [PhotoListComponent, LoadButtonComponent, PhotosComponent, FilterByDescriptionPipe],
-  
+
     imports: [CommonModule, PhotoModule],
 })
-export class PhotoListModule{}
+export class PhotoListModule { }
