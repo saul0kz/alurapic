@@ -10,7 +10,6 @@ import { CardModule } from '../shared/components/card/card.module';
 @NgModule({
     declarations :[PhotosComponent],
     imports: [
-        PhotoFormModule,
         PhotoModule,
         CardModule,
         CommonModule
