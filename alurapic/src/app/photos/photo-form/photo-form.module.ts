@@ -5,7 +5,6 @@ import { PhotoFormComponent } from './photo-form.component';
 
 @NgModule({
     declarations: [PhotoFormComponent],
-    exports: [PhotoFormComponent],
-    imports: [CommonModule],
+     imports: [CommonModule],
 })
 export class PhotoFormModule{}
