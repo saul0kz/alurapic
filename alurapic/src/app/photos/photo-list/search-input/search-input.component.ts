@@ -19,7 +19,11 @@ export class SearchInputComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.debounce.unsubscribe;
   }
-   
+  
+  
+  feedBack(filter) : void{
+    this.onTyping.emit(filter);
+  }
 
   ngOnInit(): void {
    

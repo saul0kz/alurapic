@@ -2,12 +2,13 @@
    Sem fotos!
 </p>
 
-<ol class="list-unstyled row">
+<ol class="list-unstyled row" >
    <li *ngFor="let cols of rows" class="row no-gutters">
-      <div *ngFor="let photo of cols" class="col-4">
-         <app-card>
+      <div appDarkenOnHoverDirective *ngFor="let photo of cols" class="col-4">
+         <app-card >
             <ap-photo [url]="photo.url" [description]="photo.description">
             </ap-photo>
+            
             <div class="text-center">
                <i class="fa fa-heart-o"></i>{{photo.likes}}
                <i class="fa fa-comment-o"></i>{{photo.comments}}
