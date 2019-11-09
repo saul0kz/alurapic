@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { ErrorsModule } from './errors/errors.module';
 import { PhotoListModule } from './photos/photo-list/photos-list.module';
 import { PhotoFormModule } from './photos/photo-form/photo-form.module';
+import { SigninModule } from './home/signin/signin.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PhotoFormModule } from './photos/photo-form/photo-form.module';
     AppRoutingModule,
     PhotoListModule,
     PhotoFormModule,
-    ErrorsModule,    
+    ErrorsModule,
+    SigninModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

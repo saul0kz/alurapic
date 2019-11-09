@@ -1,12 +1,14 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { Photo } from "./photo";
+import { FormGroup } from '@angular/forms';
 
-const API = 'http://206.81.3.111:3000';
+const API = 'http://localhost:3000';
 @Injectable({ providedIn: 'root' })
 export class PhotoService {
 
   http: HttpClient;
+  loginForm: FormGroup;
 
 
   constructor(http: HttpClient) {
