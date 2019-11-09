@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/core/auth.service';
+import { AuthService } from 'src/app/core/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -35,8 +35,9 @@ export class SigninComponent implements OnInit {
         err => {
          window.alert(err.message);
          this.userNameInput.nativeElement.focus();
+        
           this.loginForm.reset();
-
+          this.userNameInput.nativeElement.value = userName;
         }
       );
 
