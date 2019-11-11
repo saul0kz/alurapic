@@ -8,6 +8,7 @@ import { ErrorsModule } from './errors/errors.module';
 import { PhotoListModule } from './photos/photo-list/photos-list.module';
 import { PhotoFormModule } from './photos/photo-form/photo-form.module';
 import { SigninModule } from './home/signin/signin.module';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SigninModule } from './home/signin/signin.module';
     PhotoListModule,
     PhotoFormModule,
     ErrorsModule,
-    SigninModule    
+    SigninModule,
+    CoreModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
