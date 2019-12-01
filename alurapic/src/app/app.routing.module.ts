@@ -8,16 +8,23 @@ import { SigninComponent } from './home/signin/signin.component';
 import { AuthGuard } from './core/auth/auth.guard';
 import { SignupComponent } from './home/signup/signup.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home/home.component';
 
 const routes: Routes = [
     {
-        path: '', component: SigninComponent,
+        path: '',
+        component: HomeComponent,
         canActivate: [AuthGuard],
-        
-    },
-    {
-        path: 'signup', component: SignupComponent,     
-        
+        children: [
+            {
+                path: '',
+                component: SigninComponent,
+            },
+            {
+                path: 'signup',
+                component: SignupComponent,
+            },
+        ]
     },
     {
         path: 'user/:userName', component: PhotoListComponent,
