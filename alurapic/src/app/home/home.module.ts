@@ -4,14 +4,15 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home.component';
+import { HomeRoutingModule } from './home.routing.module';
 
 
 
 @NgModule({
   declarations: [SigninComponent, SignupComponent, HomeComponent],
   imports: [
-    CommonModule, ReactiveFormsModule, FormsModule, RouterModule
+    CommonModule, ReactiveFormsModule, FormsModule, RouterModule, HomeRoutingModule
   ],
  
 })

@@ -9,7 +9,7 @@ import { PhotoListModule } from './photos/photo-list/photos-list.module';
 import { PhotoFormModule } from './photos/photo-form/photo-form.module';
 
 import { CoreModule } from './core/core.module';
-import { HomeModule } from './home/home.module';
+
 
 
 @NgModule({
@@ -23,7 +23,6 @@ import { HomeModule } from './home/home.module';
     PhotoListModule,
     PhotoFormModule,
     ErrorsModule,
-    HomeModule,
     CoreModule    
   ],
   providers: [],

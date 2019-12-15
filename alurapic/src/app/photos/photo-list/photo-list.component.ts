@@ -13,7 +13,7 @@ export class PhotoListComponent implements OnInit {
 
 
   photos: Photo[] = [];
-  filter: String = "";
+  filter: string = "";
   hasMore: boolean = false;
   userName: string = "";
   currentPage: number = 1;
