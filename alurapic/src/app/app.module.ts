@@ -9,6 +9,8 @@ import { PhotoListModule } from './photos/photo-list/photos-list.module';
 import { PhotoFormModule } from './photos/photo-form/photo-form.module';
 
 import { CoreModule } from './core/core.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RequestInterceptor } from './core/auth/request.interceptor';
 
 
 
@@ -25,7 +27,13 @@ import { CoreModule } from './core/core.module';
     ErrorsModule,
     CoreModule    
   ],
-  providers: [],
+  providers: [
+    {
+        provide: HTTP_INTERCEPTORS,
+        useClass: RequestInterceptor,
+        multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

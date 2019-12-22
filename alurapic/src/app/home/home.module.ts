@@ -14,6 +14,6 @@ import { HomeRoutingModule } from './home.routing.module';
   imports: [
     CommonModule, ReactiveFormsModule, FormsModule, RouterModule, HomeRoutingModule
   ],
- 
+
 })
 export class HomeModule { }
